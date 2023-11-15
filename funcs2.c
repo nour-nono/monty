@@ -1,4 +1,4 @@
-#include "mounty.h"
+#include "monty.h"
 
 /**
  * print_all - check the code

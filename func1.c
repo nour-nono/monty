@@ -1,4 +1,4 @@
-#include "mounty.h"
+#include "monty.h"
 
 /**
  * is_a_number - function that check stauts number of buffer
