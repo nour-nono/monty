@@ -31,7 +31,7 @@ void print_char_top(stack_t **stack, unsigned int line_number)
  * Return: nothing
  */
 
-void print_str(stack_t **stack, unsigned int line_number)
+void print_str(stack_t **stack, __attribute__((unused))unsigned int line_number)
 {
 	stack_t *ex = *stack;
 
