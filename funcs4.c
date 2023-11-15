@@ -1,4 +1,4 @@
-#include "mounty.h"
+#include "monty.h"
 
 /**
  * print_char_top - print top in the stack as char
