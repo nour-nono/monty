@@ -1,5 +1,35 @@
 #include "mounty.h"
 
+free_items fr_itm;
+
+/**
+ * _isdigit - Entry point
+ *
+ * @c: is a num
+ *
+ * Description: this program prints "_putchar"
+ *
+ * Return: Always 0 (Success)
+*/
+int _isdigit(int c)
+{
+	if (c >= '0' && c <= '9')
+		return (1);
+	else
+		return (0);
+}
+
+/**
+ * init_valaues - initial values for struct fr_itm
+ * @fr_itm: Global variables to initialize
+ * Return: nothing
+ */
+void init_valaues(free_items *fr_itm)
+{
+	fr_itm->fd = NULL;
+	fr_itm->buffer = NULL;
+}
+
 /**
  * main - Entry point
  * @ac: arguments count
@@ -7,7 +37,6 @@
  * Return: Always 0
  */
 
-free_items fr_itm;
 
 int main(int ac, char **av)
 {
@@ -16,6 +45,7 @@ int main(int ac, char **av)
 	int mode_stack = 1;
 	stack_t *head = NULL;
 
+	init_valaues(&fr_itm);
 	if (ac != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");

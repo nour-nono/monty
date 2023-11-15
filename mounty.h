@@ -52,6 +52,9 @@ typedef struct free_items
 	char *buffer;
 } free_items;
 extern free_items fr_itm;
+
+int _isdigit(int c);
+void init_valaues(free_items *fr_itm);
 void parse_line(stack_t **, unsigned int, int *);
 void is_a_number(stack_t **, char *, unsigned int);
 void push_operation(stack_t **, int, int);

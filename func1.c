@@ -30,7 +30,7 @@ void is_a_number(stack_t **head, char *str, unsigned int line)
 	}
 	for (; i < strlen(str); ++i)
 	{
-		if (!isdigit(str[i]))
+		if (!_isdigit(str[i]))
 		{
 			fprintf(stderr, "L%u: usage: push integer\n", line);
 			free_stack(head);
