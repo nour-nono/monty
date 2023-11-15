@@ -57,6 +57,8 @@ void find_ord(stack_t **head, char *str, unsigned int line_number)
 		{"mod", modu},
 		{"pchar", print_char_top},
 		{"pstr", print_str},
+		{"rotl", rot_l},
+		{"rotr", rot_r},
 		{NULL, NULL}
 	};
 	for (; order[i].opcode != NULL; ++i)

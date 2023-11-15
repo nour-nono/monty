@@ -73,6 +73,8 @@ void mult(stack_t **, unsigned int);
 void modu(stack_t **, unsigned int);
 void print_char_top(stack_t **, unsigned int);
 void print_str(stack_t **, unsigned int);
+void rot_l(stack_t **,unsigned int);
+void rot_r(stack_t **,unsigned int);
 void free_stack(stack_t **);
 
 

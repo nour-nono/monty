@@ -49,3 +49,51 @@ void print_str(stack_t **stack, __attribute__((unused))unsigned int line_number)
 	}
 	printf("\n");
 }
+
+/**
+ * rot_l - top element of the stack becomes the last one
+ * @stack: head
+ * @line_number: line of number
+ * Return: nothing
+ */
+
+void rot_l(stack_t **stack, __attribute__((unused))unsigned int line_number)
+{
+	stack_t *ex;
+
+	if (!stack || !*stack || !(*stack)->next)
+		return;
+	ex = *stack;
+	while (ex->next)
+		ex = ex->next;
+	ex->next = *stack;
+	(*stack)->prev = ex;
+	ex = *stack;
+	*stack = (*stack)->next;
+	(*stack)->prev = NULL;
+	ex->next = NULL;
+}
+
+/**
+ * rot_r - last element becomes the top element
+ * @stack: head
+ * @line_number: line of number
+ * Return: nothing
+ */
+
+void rot_r(stack_t **stack, __attribute__((unused))unsigned int line_number)
+{
+	stack_t *ex;
+
+	if (!stack || !*stack || !(*stack)->next)
+		return;
+	ex = *stack;
+	while (ex->next)
+		ex = ex->next;
+	ex->next = *stack;
+	(*stack)->prev = ex;
+	ex = ex->prev;
+	*stack = (*stack)->prev;
+	(*stack)->prev = NULL;
+	ex->next = NULL;
+}
