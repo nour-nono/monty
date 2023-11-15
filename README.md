@@ -1,3 +1,2 @@
-new program
-alx task 
-Return nothing
+0x19. C - Stacks, Queues - LIFO, FIFO
+task for alx higher level
