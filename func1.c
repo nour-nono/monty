@@ -49,7 +49,7 @@ void is_a_number(stack_t **head, char *str, unsigned int line)
 
 void push_operation(stack_t **head, int n, int mode_stack)
 {
-	if (mode_stack)
+	if (mode_stack == 1)
 		push_in_stack(head, n);
 	else
 		push_in_queue(head, n);

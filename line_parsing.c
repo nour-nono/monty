@@ -16,10 +16,10 @@ void parse_line(stack_t **head, unsigned int line_number, int *mode_stack)
 		return;
 	if (strcmp("stack", token) == 0 || strcmp("queue", token) == 0)
 	{
-		if (strcmp("stack", token))
-			*mode_stack = 0;
-		else
+		if (strcmp("stack", token) == 0)
 			*mode_stack = 1;
+		if (strcmp("queue", token) == 0)
+			*mode_stack = 0;
 	}
 	else if (strcmp("push", token) == 0)
 	{
