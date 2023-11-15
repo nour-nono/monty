@@ -49,6 +49,7 @@ void find_ord(stack_t **head, char *str, unsigned int line_number)
 		{"pint", print_top},
 		{"pop", pop_top},
 		{"swap", swaps},
+		{"nop", nop},
 		{"add", adds},
 		{"sub", subt},
 		{"mul", mult},
