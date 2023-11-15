@@ -23,3 +23,25 @@ void print_char_top(stack_t **stack, unsigned int line_number)
 	}
 	printf("%c\n", (*stack)->n);
 }
+
+/**
+ * print_str - prints str starting at the top of the stack
+ * @stack: head
+ * @line_number: line of number
+ * Return: nothing
+ */
+
+void print_str(stack_t **stack, unsigned int line_number)
+{
+	stack_t *ex = *stack;
+
+	if (!stack || !*stack)
+		printf("\n");
+	while (ex)
+	{
+		if (ex->n < 32 || ex->n > 126)
+			break;
+		printf("%c\n", ex->n);
+		ex = ex->next;
+	}
+}
