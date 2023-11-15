@@ -36,12 +36,16 @@ void print_str(stack_t **stack, __attribute__((unused))unsigned int line_number)
 	stack_t *ex = *stack;
 
 	if (!stack || !*stack)
+	{
 		printf("\n");
+		return;
+	}
 	while (ex)
 	{
 		if (ex->n < 32 || ex->n > 126)
 			break;
-		printf("%c\n", ex->n);
+		printf("%c", ex->n);
 		ex = ex->next;
 	}
+	printf("\n");
 }
