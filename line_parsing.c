@@ -56,7 +56,7 @@ void find_ord(stack_t **head, char *str, unsigned int line_number)
 		{"div", divi},
 		{"mod", modu},
 		{"pchar", print_char_top},
-		{"pstr", print_str},
+		{"pstr", print_st},
 		{"rotl", rot_l},
 		{"rotr", rot_r},
 		{NULL, NULL}
